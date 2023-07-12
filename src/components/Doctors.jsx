@@ -12,16 +12,17 @@ const Doctors = () => {
 
 <Row>
 
-{doctorData.map((item) => (
-  <Col xs={6}>
-  <img src="" alt="" />
-  <h5></h5>
-  <h6></h6>
+{doctorData.map(({id,img,dep,name}) => (
+  <Col xs={6} sm={4} md={3}>
+  <img src={img} alt={name} className="img-thumbnail doctor-img"/>
+  <h5> {name} </h5>
+  <h6> {dep} </h6>
   </Col>
 ))}
 
   <Col></Col>
 </Row>
+
      
     </Container>
   )
